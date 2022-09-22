@@ -1,0 +1,30 @@
+version=4
+opts=dversionmangle=auto,\
+compression=gz,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/should.js-$1.tar.gz/,\
+repacksuffix=~dfsg \
+ https://github.com/shouldjs/should.js/tags .*/archive/v?([\d\.]+).tar.gz debian
+
+opts=\
+dversionmangle=auto,component=should-equal,\
+compression=gz,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-should-equal-$1.tar.gz/ \
+ https://github.com/shouldjs/equal/releases .*/archive/v?([\d\.]+).tar.gz ignore
+
+opts="dversionmangle=auto,searchmode=plain,pgpmode=none,component=should-format" \
+ https://registry.npmjs.org/should-format \
+ https://registry.npmjs.org/should-format/-/should-format-(\d[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts=\
+dversionmangle=auto,component=should-type,\
+compression=gz,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-should-type-$1.tar.gz/ \
+ https://github.com/shouldjs/type/releases .*/archive/v?([\d\.]+).tar.gz ignore
+
+opts="dversionmangle=auto,searchmode=plain,pgpmode=none,component=should-type-adaptors" \
+ https://registry.npmjs.org/should-type-adaptors \
+ https://registry.npmjs.org/should-type-adaptors/-/should-type-adaptors-(\d[\d\.]*)@ARCHIVE_EXT@ ignore
+
+opts="dversionmangle=auto,searchmode=plain,pgpmode=none,component=should-util" \
+ https://registry.npmjs.org/should-util \
+ https://registry.npmjs.org/should-util/-/should-util-(\d[\d\.]*)@ARCHIVE_EXT@ ignore

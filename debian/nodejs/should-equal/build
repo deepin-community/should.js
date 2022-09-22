@@ -1,0 +1,2 @@
+rollup --format=cjs -o cjs/should-equal.js index.js
+rollup --format=es -o es6/should-equal.js index.js

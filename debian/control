@@ -1,0 +1,52 @@
+Source: should.js
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Leo Iannacone <l3on@ubuntu.com>,
+           Jérémy Lal <kapouer@melix.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13)
+ , mocha <!nocheck>
+ , node-bluebird <!nocheck>
+ , node-rollup-plugin-node-resolve (>= 9~)
+ , node-rollup-plugin-commonjs (>= 15~)
+ , nodejs
+ , pkg-js-tools (>= 0.9.3)
+ , rollup (>= 1)
+ , uglifyjs
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/should.js
+Vcs-Git: https://salsa.debian.org/js-team/should.js.git
+Homepage: https://github.com/shouldjs/should.js
+Rules-Requires-Root: no
+
+Package: node-should
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+Provides: ${nodejs:Provides}
+Multi-Arch: foreign
+Description: behavior driven test assertions library - Node.js module
+ Should is an expressive, readable, test framework agnostic, assertion library.
+ It helps keeping test code clean and error messages helpful.
+ .
+ It extends Object.prototype with a single non-enumerable getter that
+ allows one to express how the object should behave.
+ .
+ Node.js is an event-based server-side JavaScript engine.
+
+Package: libjs-should
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: javascript-common
+Multi-Arch: foreign
+Description: behavior driven test assertions library - browser module
+ Should is an expressive, readable, test framework agnostic, assertion library.
+ It helps keeping test code clean and error messages helpful.
+ .
+ It extends Object.prototype with a single non-enumerable getter that
+ allows one to express how the object should behave.
+ .
+ This package provides should for use directly in web browsers.

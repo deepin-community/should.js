@@ -1,0 +1,25 @@
+Upstream project is archived.
+
+Forwarded: not-needed
+
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -1,7 +1,8 @@
+ /*eslint-env node */
+ "use strict";
+ 
+-const nodeResolve = require("rollup-plugin-node-resolve");
++const nodeResolve = require("@rollup/plugin-node-resolve").nodeResolve;
++const cjs = require("@rollup/plugin-commonjs");
+ 
+ const pkg = require("./package.json");
+ 
+@@ -24,6 +25,7 @@
+       jsnext: true,
+       main: true,
+       preferBuiltins: false
+-    })
++    }),
++    cjs()
+   ]
+ };

@@ -1,0 +1,2 @@
+rollup --format=cjs -o cjs/should-type.js index.js
+rollup --format=es -o es6/should-type.js index.js

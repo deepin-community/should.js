@@ -1,0 +1,3 @@
+rollup -c rollup.config.js --input ./lib/umd.js --output.format=iife  --output.file ./should.js
+rollup --output.format=cjs -o cjs/should.js lib/index.js
+rollup --output.format=es -o es6/should.js lib/index.js

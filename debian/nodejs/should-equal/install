@@ -1,0 +1,3 @@
+package.json should-equal/
+cjs should-equal/
+es6 should-equal/

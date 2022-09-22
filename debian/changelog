@@ -1,0 +1,146 @@
+should.js (13.2.3~dfsg-5) unstable; urgency=medium
+
+  * Team upload
+
+  [ Xavier Guimard ]
+  * Use ${nodejs:Provides}
+
+  [ Pirate Praveen ]
+  * Drop legacy node-resolve plugin usage
+  * Bump Standards-Version to 4.5.1 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 30 Dec 2020 23:32:32 +0530
+
+should.js (13.2.3~dfsg-4) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.0
+  * Fix build with recent uglifyjs
+  * Add "Multi-Arch: foreign"
+  * Bump debhelper compatibility level to 13
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 21 Sep 2020 15:57:33 +0200
+
+should.js (13.2.3~dfsg-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set fields Upstream-Contact in debian/copyright.
+  * Remove obsolete fields Name, Contact from debian/upstream/metadata.
+
+  [ Xavier Guimard ]
+  * Fix build for rollup ≥ 1 (Closes: #954585, #942389)
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 23 Mar 2020 16:31:02 +0100
+
+should.js (13.2.3~dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix debian/watch
+  * New upstream version 13.2.3~dfsg
+  * Back to unstable after successful tests on ci.debian/net
+  * Generate minified file and source map
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 25 Aug 2019 22:37:52 +0200
+
+should.js (13.2.3~dfsg-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream version 13.2.3~dfsg
+  * Update debian/copyright
+  * Add should-equal test
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 22 Aug 2019 12:43:32 +0200
+
+should.js (13.2.1~dfsg-2) experimental; urgency=medium
+
+  * Team upload
+  * Switch install to pkg-js-tools >= 0.9.4
+  * Switch to debhelper-compat
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 21 Aug 2019 08:37:38 +0200
+
+should.js (13.2.1~dfsg-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Jelmer Vernooĳ ]
+  * Remove unnecessary 'Testsuite: autopkgtest' header.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.0
+  * Change section to javascript
+  * Change priority to optional
+  * Add debian/gbp.conf
+  * Move installed files to /usr/share/nodejs
+  * Add upstream/metadata
+  * New upstream version 13.2.1~dfsg
+  * Add should* components (this replace patches)
+  * Build with rollup like upstream
+  * Update install
+  * Add debian/clean
+  * Remove unneeded files in import
+  * Update VCS fields to salsa
+  * Switch test to pkg-js-tools
+  * Update debian/copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 20 Jul 2019 08:17:21 +0200
+
+should.js (8.4.0~dfsg-3) unstable; urgency=medium
+
+  * Forgot to install the bundled modules (Closes: #844312)
+
+ -- Jérémy Lal <kapouer@melix.org>  Mon, 14 Nov 2016 12:45:20 +0100
+
+should.js (8.4.0~dfsg-2) unstable; urgency=medium
+
+  * Build libjs-should using node-browserify-lite
+
+ -- Jérémy Lal <kapouer@melix.org>  Mon, 14 Nov 2016 01:04:15 +0100
+
+should.js (8.4.0~dfsg-1) unstable; urgency=medium
+
+  * New upstream version 8.4.0~dfsg (Closes: #843641)
+    Versions >= 9 require rollup or babel.
+  * Set repacksuffix in watch file
+  * Update copyright paths, add contributor
+  * Secure Vcs url
+  * Standards-Version 3.9.8
+  * Bundle tied modules as patches:
+    + should-type 0.2.0
+    + should-equal 0.8.0
+    + should-format 0.3.2
+  * Setup autopkgtest, cleanup rules
+  * No more examples
+  * No longer build-depends mocha
+
+ -- Jérémy Lal <kapouer@melix.org>  Mon, 14 Nov 2016 00:54:05 +0100
+
+should.js (4.0.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/copyright:
+    + update source url
+    + remove copyright information about lib/browser/ files which are no
+      longer in upstream
+    + document lib/inspect.js copyright information
+  * debian/control:
+    + update homepage url
+    + add node-mocha as builddep
+  * debian/rules: enable tests
+  * debian/watch: update url
+  * node-should.lintian-overrides: removed, no longer needed since
+    current release does not have a jquery.js file which caused
+    lintian warning embedded-javascript-library false positive.
+
+ -- Leo Iannacone <l3on@ubuntu.com>  Sun, 15 Jun 2014 16:29:13 +0200
+
+should.js (3.3.1+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #745151)
+
+ -- Leo Iannacone <l3on@ubuntu.com>  Tue, 06 May 2014 23:19:52 +0200
